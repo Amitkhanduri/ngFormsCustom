@@ -11,9 +11,30 @@
         "type": "range"
       },
       "/Users/dev3/Documents/meanapp"
+    ],
+    [
+      {
+        "raw": "ng2-formio@git+https://github.com/Amitkhanduri/ngFormsCustom.git",
+        "scope": null,
+        "escapedName": "ng2-formio",
+        "name": "ng2-formio",
+        "rawSpec": "git+https://github.com/Amitkhanduri/ngFormsCustom.git",
+        "spec": "git+https://github.com/Amitkhanduri/ngFormsCustom.git",
+        "type": "hosted",
+        "hosted": {
+          "type": "github",
+          "ssh": "git@github.com:Amitkhanduri/ngFormsCustom.git",
+          "sshUrl": "git+ssh://git@github.com/Amitkhanduri/ngFormsCustom.git",
+          "httpsUrl": "git+https://github.com/Amitkhanduri/ngFormsCustom.git",
+          "gitUrl": "git://github.com/Amitkhanduri/ngFormsCustom.git",
+          "shortcut": "github:Amitkhanduri/ngFormsCustom",
+          "directUrl": "https://raw.githubusercontent.com/Amitkhanduri/ngFormsCustom/master/package.json"
+        }
+      },
+      "/Users/dev3/Documents/meanapp"
     ]
   ],
-  "_from": "ng2-formio@>=1.0.0-rc.10 <2.0.0",
+  "_from": "git+https://github.com/Amitkhanduri/ngFormsCustom.git",
   "_id": "ng2-formio@1.0.0-rc.34",
   "_inCache": true,
   "_location": "/ng2-formio",
@@ -29,21 +50,30 @@
   "_npmVersion": "3.10.10",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "ng2-formio@^1.0.0-rc.10",
+    "raw": "ng2-formio@git+https://github.com/Amitkhanduri/ngFormsCustom.git",
     "scope": null,
     "escapedName": "ng2-formio",
     "name": "ng2-formio",
-    "rawSpec": "^1.0.0-rc.10",
-    "spec": ">=1.0.0-rc.10 <2.0.0",
-    "type": "range"
+    "rawSpec": "git+https://github.com/Amitkhanduri/ngFormsCustom.git",
+    "spec": "git+https://github.com/Amitkhanduri/ngFormsCustom.git",
+    "type": "hosted",
+    "hosted": {
+      "type": "github",
+      "ssh": "git@github.com:Amitkhanduri/ngFormsCustom.git",
+      "sshUrl": "git+ssh://git@github.com/Amitkhanduri/ngFormsCustom.git",
+      "httpsUrl": "git+https://github.com/Amitkhanduri/ngFormsCustom.git",
+      "gitUrl": "git://github.com/Amitkhanduri/ngFormsCustom.git",
+      "shortcut": "github:Amitkhanduri/ngFormsCustom",
+      "directUrl": "https://raw.githubusercontent.com/Amitkhanduri/ngFormsCustom/master/package.json"
+    }
   },
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/ng2-formio/-/ng2-formio-1.0.0-rc.34.tgz",
-  "_shasum": "f3d4ec5db689c178f774af8e81c8d26573f735de",
+  "_resolved": "git+https://github.com/Amitkhanduri/ngFormsCustom.git#ecb121c083b896e07c2c974b62bd41c6b4f33341",
+  "_shasum": "77384d8e8e2209e4f51ed86e99fd4b80650db7e2",
   "_shrinkwrap": null,
-  "_spec": "ng2-formio@^1.0.0-rc.10",
+  "_spec": "ng2-formio@git+https://github.com/Amitkhanduri/ngFormsCustom.git",
   "_where": "/Users/dev3/Documents/meanapp",
   "bugs": {
     "url": "https://github.com/formio/ng2-formio/issues"

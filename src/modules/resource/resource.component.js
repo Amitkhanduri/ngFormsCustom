@@ -16,7 +16,8 @@ var FormioResourceComponent = (function () {
                         'ul.nav.nav-tabs { margin-bottom: 20px; }',
                         '.resource-back-icon { font-size: 1.2em; padding: 0.6em; }'
                     ],
-                    template: '<ul class="nav nav-tabs">' +
+                    template: '<a routerLink="/" style="float:left">New form</a>' +
+                    '<ul class="nav nav-tabs">' +
                         '<li role="presentation" routerLinkActive="active"><a routerLink="view">View</a></li>' +
                         '<li role="presentation" routerLinkActive="active"><a routerLink="edit">Edit</a></li>' +
                         '<li role="presentation pull-right" routerLinkActive="active"><a routerLink="delete"><span class="glyphicon glyphicon-trash"></span></a></li>' +
@@ -24,6 +25,7 @@ var FormioResourceComponent = (function () {
                         '<router-outlet></router-outlet>'
                 },] },
     ];
+   
     /** @nocollapse */
     FormioResourceComponent.ctorParameters = function () { return [
         { type: resource_service_1.FormioResourceService, },
@@ -31,4 +33,5 @@ var FormioResourceComponent = (function () {
     ]; };
     return FormioResourceComponent;
 }());
+
 exports.FormioResourceComponent = FormioResourceComponent;

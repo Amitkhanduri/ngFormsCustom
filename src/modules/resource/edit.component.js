@@ -10,6 +10,7 @@ var FormioResourceEditComponent = (function () {
         this.route = route;
         this.router = router;
         this.config = config;
+       // console.log("service data in edit form",service)
     }
     FormioResourceEditComponent.prototype.onSubmit = function (submission) {
         var _this = this;

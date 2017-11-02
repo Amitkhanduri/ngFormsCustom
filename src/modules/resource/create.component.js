@@ -2,18 +2,27 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
+var http_1 =require("@angular/http");
 var resource_service_1 = require("./resource.service");
 var resource_config_1 = require("./resource.config");
-
+var serviceData;
 var FormioResourceCreateComponent = (function () {
     function FormioResourceCreateComponent(service, route, router, config) {
+        console.log("Form elements on create page",service);
         this.service = service;
         this.route = route;
         this.router = router;
         this.config = config;
+       
         // Start with fresh data.
         this.service.initialize();
+        
     }
+
+    // FormioResourceCreateComponent.prototype.onChange = function (event) {
+    //     console.log("Event change",event);
+    // };
+   
 
     
     FormioResourceCreateComponent.prototype.onSubmit = function (submission) {
@@ -24,6 +33,24 @@ var FormioResourceCreateComponent = (function () {
             // _this.router.navigate(['../', _this.service.resource._id, 'edit'], { relativeTo: _this.route });           
         });
     };
+
+    FormioResourceCreateComponent.prototype.onNextPage = function (submission) {
+       console.log("next page event data",submission.submission.data);
+    //    url="http://";
+    //    var responseData=function httpGet(url)
+    //    {
+    //        var xmlHttp = new XMLHttpRequest();
+    //        xmlHttp.open( "GET", url, false ); // false for synchronous request
+    //        xmlHttp.send( null );
+    //        return xmlHttp.responseText;
+    //   var populatedData = submission.submission.data;
+    //   populatedData.Address="abc";
+    //   console.log("submission.submission.data",populatedData);
+
+    }
+   
+      // console.log("response data",responseData);
+ 
     // FormioResourceCreateComponent.prototype.onClick = function (submission) {
     //     var _this = this;
         
@@ -34,7 +61,7 @@ var FormioResourceCreateComponent = (function () {
     FormioResourceCreateComponent.decorators = [
         { type: core_1.Component, args: [{
                     styles: ['.back-button { font-size: 0.8em; }'],
-                    template:`<formio [form]="service.form" [submission]="service.resource" [refresh]="service.refresh" [hideComponents]="config.parents" (submit)="onSubmit($event)"></formio>`
+                    template:`<formio [form]="service.form" submission="service.resource" [refresh]="service.refresh" [hideComponents]="config.parents" (submit)="onSubmit($event)" (nextPage)="onNextPage($event)"></formio>`
                 },] },
     ];
 
@@ -56,5 +83,6 @@ var FormioResourceCreateComponent = (function () {
         { type: resource_config_1.FormioResourceConfig, },
     ]; };
     return FormioResourceCreateComponent;
-}());
+    }());
+
 exports.FormioResourceCreateComponent = FormioResourceCreateComponent;
