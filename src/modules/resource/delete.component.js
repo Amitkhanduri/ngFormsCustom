@@ -12,7 +12,7 @@ var FormioResourceDeleteComponent = (function () {
     FormioResourceDeleteComponent.prototype.onDelete = function () {
         var _this = this;
         this.service.remove().then(function () {
-            _this.router.navigate(['../../'], { relativeTo: _this.route });
+            _this.router.navigate(['../../'],{relativeTo:_this.route});
         });
     };
     FormioResourceDeleteComponent.prototype.onCancel = function () {

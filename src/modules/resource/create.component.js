@@ -23,7 +23,9 @@ var FormioResourceCreateComponent = (function () {
     //     console.log("Event change",event);
     // };
    
-
+    FormioResourceCreateComponent.prototype.newvalue = function (e) {
+        console.log(e);
+    };
     
     FormioResourceCreateComponent.prototype.onSubmit = function (submission) {
         var _this = this;
@@ -61,9 +63,10 @@ var FormioResourceCreateComponent = (function () {
     FormioResourceCreateComponent.decorators = [
         { type: core_1.Component, args: [{
                     styles: ['.back-button { font-size: 0.8em; }'],
-                    template:`<formio [form]="service.form" submission="service.resource" [refresh]="service.refresh" [hideComponents]="config.parents" (submit)="onSubmit($event)" (nextPage)="onNextPage($event)"></formio>`
+                    template:`<formio [form]="service.form" submission="service.resource" [refresh]="service.refresh" [hideComponents]="config.parents" (submit)="onSubmit($event)"  (change)="newvalue($event)" (nextPage)="onNextPage($event)"></formio>`
                 },] },
     ];
+
 
     //var rtlTransform=document.querySelector("div .choices");
     //console.log("Transformation",rtlTransform);
